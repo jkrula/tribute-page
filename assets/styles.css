@@ -72,15 +72,20 @@ header #button{
 #bio .wrapper{
     display: flex;
 }
-#bio #bio-text{
+#bio #tribute-info{
     padding-right: 2rem;
     line-height: 1.5rem;
 }
 #bio img{
     max-width: 100%;
+    margin: 0 auto;
     display: inline-block;
 }
-
+#tribute-link{
+    text-decoration:none;
+    padding: 0.2rem;
+    border-bottom: 1px solid lightgray;
+}
 
 /* #quote styles */
 #works{
