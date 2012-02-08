@@ -21,6 +21,12 @@ html {
 html{
     scroll-behavior: smooth;
 }
+
+#bio, #works, #quote, #footer{
+        padding: 5rem 0;
+
+}
+
 header{
     display:flex;
     flex-direction: column;
@@ -50,12 +56,18 @@ header nav a{
 
 header #button{
     margin-top: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
 }
 
 /* #bio styles */
-#bio h2{
+#bio{
+    background-color: rgb(250, 245, 245);
+    
+}
+#bio h2, #quote h2, #works h2{
     text-align: center;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
 }
 #bio .wrapper{
     display: flex;
@@ -69,4 +81,59 @@ header #button{
     display: inline-block;
 }
 
+
 /* #quote styles */
+#works{
+    padding: 0 0.8rem;
+}
+
+#works .wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+#works h3{
+    margin-bottom: 0.4rem;
+    
+}
+#works #poems{
+    text-align:right;
+}
+#works ul{
+    list-style-type: none;
+}
+#works a{
+    padding: 0.2rem;
+    display: block;
+    color: gray;
+    text-decoration: none;
+    border-bottom: 1px dotted gray;
+}
+#works a:hover{
+    background: gray;
+    color: white;
+}
+
+#footer{
+        padding-bottom: 2rem;
+}
+
+#footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+#footer .container div{
+    padding: 0 0.8rem;
+}
+#footer h4{
+    padding-bottom: 0.2rem;
+}
+#footer ul{
+    list-style-type:none;
+}
+#footer a{
+    text-decoration: none;
+    border-bottom: 1px dotted lightgray;
+}
+#footer a:hover{
+    color: black;
+}
