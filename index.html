@@ -18,8 +18,8 @@
                 </div>
             <nav>
                    <a href="#bio">Biography</a>
+                   <a href="#quote">Quote</a>
                     <a href="#works">Selected Works</a>
-                    <a href="#quote">Quote</a>
             </nav>
             <a href="#bio" id="button">&darr;</a>
 </div>
@@ -109,8 +109,29 @@
                 </div>
         
     </footer>
-    <div id="topper">
-        <a href="#">&uparrow;</a>
-    </div>
+    <button id="topper">
+        <i>&uparrow;</i>
+    </button>
+    <script>
+        const topBtn = document.querySelector('#topper');
+           const rootElement = document.documentElement;
+            
+           function scrollToTop(){
+               rootElement.scrollTo({top: 0, behavior:"smooth"});
+           }
+
+           function scrollFunction(){
+               if(rootElement.scrollTop > 500 ){
+                   topBtn.classList.add('show');
+               }else{
+                   topBtn.classList.remove('show');
+               }
+           }
+        window.onscroll = function(){scrollFunction()}
+        topBtn.addEventListener('click',scrollToTop);
+
+        
+    </script>
 </body>
+
 </html>
