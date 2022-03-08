@@ -207,6 +207,7 @@ header #button:hover{
     right: 2vh;
     z-index: 99;
     color: var(--white);
+    
 }
 #topper.show{
     display: flex;
