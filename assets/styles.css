@@ -50,11 +50,11 @@ header{
     background-position:left;
     background-repeat: no-repeat;
     background-attachment:fixed; 
-    color: var(--dark);
 }
 header h1{
     font-size: 4rem;
     font-weight:bold;
+    color: var(--white);
 }
 header p{
     font-size: 1.5rem;
@@ -65,32 +65,30 @@ header nav{
     margin-top: 4rem;
     
 }
-header nav, #button{
-    background-color: rgba(217, 40, 233, 0.5);
 
-}
 header nav a{
     display: inline-block;
     padding: 0.5rem;
     margin-left: 1rem;
     font-size: 1.4rem;
     text-decoration: none;
-    color: var(--white);
+    color: var(--dark);
     
 }
 header nav a:hover{
-color: var(--dark);
+color: var(--white);
 }
 
 header #button{
     margin-top: 2rem;
     font-size: 1.5rem;
     text-decoration: none;
-    color: var(--white);
+    color: var(--dark);
     padding: 0.5rem 0.8rem;
 }
 header #button:hover{
-    background-color: var(--dark);
+    background-color: var(--lightdarker);
+    color: var(--white);
 }
 /* #bio styles */
 
