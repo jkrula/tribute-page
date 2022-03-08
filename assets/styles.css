@@ -27,7 +27,7 @@ html{
 }
 
 #bio, #works, #quote, #footer{
-        padding: 5rem 0;
+        padding: 3rem 0;
 
 }
 p{
@@ -49,12 +49,14 @@ header{
     ,
     url(achebelg.jpg);
     background-position:left;
+    /* background-size: right; */
     background-repeat: no-repeat;
     background-attachment:fixed; 
 }
 header h1{
     font-size: 4rem;
     font-weight:bold;
+    text-align:center;
     color: var(--white);
 }
 header p{
@@ -106,6 +108,7 @@ header #button:hover{
 }
 #bio img{
     max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     display: inline-block;
 }
@@ -181,13 +184,23 @@ header #button:hover{
 }
 #footer h4{
     padding-bottom: 0.2rem;
+    text-transform: uppercase;
 }
 #footer ul{
     list-style-type:none;
 }
+#footer #about{
+    width: 40%;
+}
+#footer p, #footer li{
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+    margin-top: 0;
+}
 #footer a{
     text-decoration: none;
     color: var(--lightdarker);
+    font-size: 0.9rem;
     border-bottom: 1px dotted var(--white);
 }
 #footer a:hover{
@@ -221,4 +234,47 @@ header #button:hover{
     font-size: 1.5rem;
 }
 
-    
+@media screen and (max-width: 768px){
+ #bio .wrapper {
+    flex-direction:column;    
+ }
+ #bio #tribute-info{
+     padding: 0 0.2rem;
+     text-align:justify;
+ }
+
+ #img-div{
+     order:-1;
+     margin-bottom: 0.8rem;
+ }
+ #tribute-link{
+     display: block;
+     width: 40%;
+     margin: 1rem auto;
+ }
+ #quote{
+     text-align: center;
+ }
+ #works .wrapper{
+     flex-direction:column;
+ }
+ #works #poems {
+     text-align: left;
+     margin-top: 2rem;
+ }
+ #works h3{
+     text-align:center;
+ }
+
+ #footer .container{
+     flex-direction:column;
+
+ }
+ #footer .container div {
+     margin-bottom: 1.5rem;
+     text-align:center;
+ }
+ #footer #about {
+     width: 100%;
+ }
+}
