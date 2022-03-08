@@ -33,6 +33,7 @@ p{
     line-height: 1.8rem;
     margin-top: 0.2rem;
 }
+/* header styles */
 
 header{
     display:flex;
@@ -46,13 +47,14 @@ header{
        hsla(0deg, 42%,85%,0.5) 100%)
     ,
     url(achebelg.jpg);
-    background-position: top center;
+    background-position:left;
     background-repeat: no-repeat;
-    background-size: cover;
     background-attachment:fixed; 
+    color: var(--dark);
 }
 header h1{
     font-size: 4rem;
+    font-weight:bold;
 }
 header p{
     font-size: 1.5rem;
@@ -61,6 +63,11 @@ header p{
 }
 header nav{
     margin-top: 4rem;
+    
+}
+header nav, #button{
+    background-color: rgba(217, 40, 233, 0.5);
+
 }
 header nav a{
     display: inline-block;
@@ -68,15 +75,23 @@ header nav a{
     margin-left: 1rem;
     font-size: 1.4rem;
     text-decoration: none;
+    color: var(--white);
     
+}
+header nav a:hover{
+color: var(--dark);
 }
 
 header #button{
     margin-top: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
+    color: var(--white);
+    padding: 0.5rem 0.8rem;
 }
-
+header #button:hover{
+    background-color: var(--dark);
+}
 /* #bio styles */
 
 #bio h2, #quote h2, #works h2{
@@ -142,7 +157,7 @@ header #button{
     display: block;
     color:var(--dark);
     text-decoration: none;
-    border-bottom: 1px dotted gray;
+    border-bottom: 1px dotted var(--dark);
 }
 #works a:hover{
     background:var(--lightdarker);
