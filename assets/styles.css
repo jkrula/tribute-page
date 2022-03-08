@@ -8,7 +8,11 @@
     font-family:"Lato",Verdana,Tahoma, sans-serif;
 }
 :root{
-    
+    --dark: rgb(53, 3, 49);
+    --white: #fff;
+    --lightgray: lightgray;
+    --lightdarker: rgb(179, 99, 171);
+    --lightbg: rgb(250, 245, 245);
 }
 .wrapper{
     max-width: 980px;
@@ -25,6 +29,10 @@ html{
         padding: 5rem 0;
 
 }
+p{
+    line-height: 1.8rem;
+    margin-top: 0.2rem;
+}
 
 header{
     display:flex;
@@ -32,7 +40,12 @@ header{
     align-items: center;
     height: 100vh;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url(achebelg.jpg);
+   background-image: linear-gradient(55deg,
+       hsla(240deg, 100%, 20%, 0.5) 0%,
+       hsla(300deg, 71%,52%, 0.5) 50%,
+       hsla(0deg, 42%,85%,0.5) 100%)
+    ,
+    url(achebelg.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,10 +78,7 @@ header #button{
 }
 
 /* #bio styles */
-#bio{
-    background-color: rgb(250, 245, 245);
-    
-}
+
 #bio h2, #quote h2, #works h2{
     text-align: center;
     padding-bottom: 1.5rem;
@@ -85,15 +95,32 @@ header #button{
     margin: 0 auto;
     display: inline-block;
 }
+#img-caption{
+    text-align: center;
+}
 #tribute-link{
     text-decoration:none;
     padding: 0.2rem;
-    border-bottom: 1px solid lightgray;
+    color: var(--dark);
+    border-bottom: 1px solid var(--lightdarker);
+}
+#tribute-link:hover{
+    background-color: var(--lightdarker);
+    color: var(--white);
 }
 
 /* #quote styles */
+#quote{
+    background-color: var(--lightbg);
+    text-align: right;
+}
+
+
+
+/* works styles */
 #works{
-    padding: 0 0.8rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
 }
 
 #works .wrapper{
@@ -113,17 +140,22 @@ header #button{
 #works a{
     padding: 0.2rem;
     display: block;
-    color: gray;
+    color:var(--dark);
     text-decoration: none;
     border-bottom: 1px dotted gray;
 }
 #works a:hover{
-    background: gray;
-    color: white;
+    background:var(--lightdarker);
+    color: var(--white);
 }
 
+ /* footer styles */
+
 #footer{
+    padding-top: 2rem;
         padding-bottom: 2rem;
+        background-color: var(--dark);
+        color: var(--lightgray);
 }
 
 #footer .container{
@@ -141,10 +173,11 @@ header #button{
 }
 #footer a{
     text-decoration: none;
-    border-bottom: 1px dotted lightgray;
+    color: var(--lightdarker);
+    border-bottom: 1px dotted var(--white);
 }
 #footer a:hover{
-    color: black;
+    color: var(--white);
 }
 
 
@@ -152,7 +185,7 @@ header #button{
     width: 3rem;
     height: 3rem;
     border-radius: 100%;
-    background: gray;
+    background: var(--lightdarker);
     display: none;
     align-items: center;
     justify-content: center;    
@@ -160,15 +193,15 @@ header #button{
     bottom: 2vh;
     right: 2vh;
     z-index: 99;
+    color: var(--white);
 }
 #topper.show{
     display: flex;
 }
 #topper:hover{
-    background: #222;
+    color: var(--dark);
 }
 #topper i{
-    color: white;
     text-decoration: none;
     font-size: 1.5rem;
 }
